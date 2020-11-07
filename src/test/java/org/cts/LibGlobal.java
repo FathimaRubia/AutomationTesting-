@@ -34,6 +34,7 @@ import org.openqa.selenium.interactions.Actions;
 import org.openqa.selenium.support.ui.ExpectedConditions;
 import org.openqa.selenium.support.ui.FluentWait;
 import org.openqa.selenium.support.ui.Select;
+import org.testng.Reporter;
 
 public class LibGlobal {
 	public static WebDriver driver=null;
@@ -179,9 +180,11 @@ public class LibGlobal {
 		return elements;
 	}
 	public static void screenShot(String name) throws IOException {
+		tk=(TakesScreenshot)driver;
 		File src = tk.getScreenshotAs(OutputType.FILE);
-		f=new File("C:\\Users\\AA\\eclipse-workspace\\ProjectFramework\\ScreenShot\\"+name+".png");
+		f=new File(System.getProperty("user.dir")+"\\ScreenShot\\"+name+".png");
 		FileUtils.copyFile(src, f);
+		Reporter.log("<br><img src='"+f+"' height='400' width='400'/><br>");
 	}
 	public static void jsFill(WebElement element,String input) {
 		js.executeScript("arguments[0].setAttribute('value','"+input+"')", element);

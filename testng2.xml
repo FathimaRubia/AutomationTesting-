@@ -1,0 +1,21 @@
+<?xml version="1.0" encoding="UTF-8"?>
+<!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
+<suite name="Suite" parallel="tests" >
+<listeners>
+<listener class-name="org.cts.IAnnotationITestListen"></listener>
+</listeners>
+  <test thread-count="5" name="Test">
+  <parameter name="input" value="Samsung 34 inch LED tv" ></parameter>
+  <parameter name="adacUser" value="Hopethebest" ></parameter>
+  <parameter name="adacPass" value="aakifaaafiq" ></parameter>
+  <parameter name="flipUser" value="9952170568" ></parameter>
+  <parameter name="flipPass" value="aakifaaafiq" ></parameter>
+  <parameter name="amazUser" value="9952170568" ></parameter>
+  <parameter name="amazPass" value="aakifaaafiq" ></parameter>
+  <parameter name="product" value="Kids shoes" ></parameter>
+  
+    <classes>
+      <class name="org.cts.AmazonExecutionClass"/>
+    </classes>
+  </test> <!-- Test -->
+</suite> <!-- Suite -->

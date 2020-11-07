@@ -1,14 +1,27 @@
 <?xml version="1.0" encoding="UTF-8"?>
 <!DOCTYPE suite SYSTEM "http://testng.org/testng-1.0.dtd">
-<suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
-  <test thread-count="5" name="Default test(failed)">
+<suite guice-stage="DEVELOPMENT" name="Failed suite [Suite]" parallel="tests">
+  <listeners>
+    <listener class-name="org.cts.IAnnotationITestListen"/>
+  </listeners>
+  <test thread-count="5" name="Test(failed)" parallel="tests">
+    <parameter name="flipUser" value="9952170568"/>
+    <parameter name="input" value="Samsung 34 inch LED tv"/>
+    <parameter name="adacUser" value="Hopethebest"/>
+    <parameter name="product" value="Kids shoes"/>
+    <parameter name="adacPass" value="aakifaaafiq"/>
+    <parameter name="amazPass" value="aakifaaafiq"/>
+    <parameter name="flipPass" value="aakifaaafiq"/>
+    <parameter name="amazUser" value="9952170568"/>
     <classes>
-      <class name="org.tasks.ProductsSearch">
+      <class name="org.cts.AmazonExecutionClass">
         <methods>
-          <include name="tc2" invocation-numbers="3"/>
-          <include name="browserLaunch"/>
+          <include name="searchProductFailure" invocation-numbers="0 0 0 0"/>
+          <include name="close"/>
+          <include name="browser"/>
+          <include name="searchProduct" invocation-numbers="0 0"/>
         </methods>
-      </class> <!-- org.tasks.ProductsSearch -->
+      </class> <!-- org.cts.AmazonExecutionClass -->
     </classes>
-  </test> <!-- Default test(failed) -->
-</suite> <!-- Failed suite [Default suite] -->
+  </test> <!-- Test(failed) -->
+</suite> <!-- Failed suite [Suite] -->

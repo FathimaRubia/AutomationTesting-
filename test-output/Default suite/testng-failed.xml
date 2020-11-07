@@ -3,12 +3,12 @@
 <suite guice-stage="DEVELOPMENT" name="Failed suite [Default suite]">
   <test thread-count="5" name="Default test(failed)">
     <classes>
-      <class name="org.tasks.ProductsSearch">
+      <class name="org.cts.ExecutionClassWithListener">
         <methods>
-          <include name="tc2" invocation-numbers="3"/>
-          <include name="browserLaunch"/>
+          <include name="KeysEnter"/>
+          <include name="browser"/>
         </methods>
-      </class> <!-- org.tasks.ProductsSearch -->
+      </class> <!-- org.cts.ExecutionClassWithListener -->
     </classes>
   </test> <!-- Default test(failed) -->
 </suite> <!-- Failed suite [Default suite] -->
